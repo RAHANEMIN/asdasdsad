@@ -1,6 +1,7 @@
 import logging
 import random
 import re
+import os
 import time
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram import Bot, Dispatcher, executor, types
@@ -13,10 +14,10 @@ kb = InlineKeyboardMarkup().add(button)
 
 
 
-crypto = AioCryptoPay(token="191421:AAvLNNXm0tcambnOBWGzekh05VXtEUcWDal", network=Networks.MAIN_NET) #токен криптобот
-API_TOKEN = '7008453328:AAGE8ZfeYokpafkuQvntTcucAerMW1CdIZo' #токен бота
-kazik = -1002174696005 #айди канала с казом
-log = -1002229270028
+crypto = AioCryptoPay(token=os.getenv("CRYPTO_BOT_API"), network=Networks.MAIN_NET) #токен криптобот
+API_TOKEN = os.getenv("BOT_TOKEN") #токен бота
+kazik = -1002048436909 #айди канала с казом
+log = -1002122255574
 #ВСЕ НУЖНОЕ
 
 
